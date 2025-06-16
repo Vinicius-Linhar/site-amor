@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แด่ อ้อน ที่รักของฉัน (Para Aon, Meu Amor)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Mali:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-particles"></div>
+
+    <main>
+        <section id="inicio" class="section-full">
+            <div class="content" data-aos="zoom-in">
+                <h1>แด่คนพิเศษที่สุดในโลก</h1>
+                <p class="subtitle">จักรวาลเล็กๆ แห่งความรัก สำหรับคุณคนเดียว</p>
+                <a href="#sobre" class="btn">ค้นพบสิ่งที่รอคุณอยู่</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="section-content">
+            <div class="content" data-aos="fade-right">
+                <h2>เกี่ยวกับคุณ... อ้อน</h2>
+                <p>
+                    หนูคือท่วงทำนองที่ขับกล่อมวันเวลาของพี่ คือแสงสว่างที่นำทางทุกย่างก้าว
+                    ทุกรายละเอียดของหนู ตั้งแต่รอยยิ้มไปจนถึงมุมมองที่หนูมีต่อโลก
+                    ทำให้พี่หลงใหลและรักหนูมากขึ้นทุกวัน
+                </p>
+            </div>
+        </section>
+
+        <section id="galeria" class="section-content">
+            <h2 data-aos="fade-up">ช่วงเวลาสุดวิเศษของเรา</h2>
+            <div class="gallery-container">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="imaga/Aon.jpg" alt="รูปภาพของเรา 1"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="imaga/Aon3.jpg" alt="รูปภาพของเรา 2"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300"><img src="imaga/Aon4.jpg" alt="รูปภาพของเรา 3"></div>
+            </div>
+        </section>
+
+        <section id="frases" class="section-content">
+             <div class="content" data-aos="zoom-in">
+                <h2>ถ้อยคำจากใจ</h2>
+                <blockquote>
+                    "ถ้าพี่ต้องเลือกอีกครั้ง พี่ก็จะเลือกหนูอีกนับพันครั้ง"
+                </blockquote>
+             </div>
+        </section>
+
+        <section id="cartinha" class="section-content">
+            <h2 data-aos="fade-up">จดหมายถึงคุณ</h2>
+            <div class="letter-box" data-aos="fade-up" data-aos-delay="200">
+                <p id="letter-text"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="music-player">
+        <p>เพลงของเรา</p>
+        <audio id="background-music" src="assets/musica.mp3" loop></audio>
+        <button id="play-pause-btn">▶️</button>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

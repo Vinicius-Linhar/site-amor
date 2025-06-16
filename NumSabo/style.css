@@ -1,0 +1,167 @@
+/* ---- CONFIGURAÇÕES GERAIS E VARIÁVEIS DE COR ---- */
+:root {
+    --rosa-claro: #ffafcc;
+    --lilas: #cdb4db;
+    --azul-bebe: #a2d2ff;
+    --creme: #fcf6bd;
+    --texto-escuro: #4a4a4a;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* MUDANÇA AQUI: Usando Kanit como fonte principal */
+    font-family: 'Kanit', sans-serif;
+    background-color: #fde2e4;
+    color: var(--texto-escuro);
+    overflow-x: hidden;
+}
+
+/* ---- FUNDO ANIMADO (sem mudanças) ---- */
+.background-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.background-particles::before {
+    content: '❤️';
+    position: absolute;
+    font-size: 20px;
+    color: var(--rosa-claro);
+    animation: float 25s infinite linear;
+    top: -50px; left: 10%; opacity: 0.3;
+}
+.background-particles::after {
+    content: '✨';
+    position: absolute;
+    font-size: 15px;
+    color: var(--creme);
+    animation: float 30s infinite linear reverse;
+    top: -50px; left: 80%; opacity: 0.5; animation-delay: 5s;
+}
+@keyframes float {
+    from { transform: translateY(0) rotate(0deg); }
+    to { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* ---- ESTILOS DAS SEÇÕES ---- */
+.section-full, .section-content {
+    text-align: center;
+}
+.section-full {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.section-content {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* MUDANÇA AQUI: Usando Mali para os títulos */
+h1, h2 {
+    font-family: 'Mali', cursive;
+    font-weight: 700;
+}
+h1 {
+    font-size: 4.5rem; /* Aumentei um pouco para a fonte tailandesa */
+    color: var(--branco);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+h2 {
+    font-size: 3.5rem; /* Aumentei um pouco para a fonte tailandesa */
+    color: var(--rosa-claro);
+    margin-bottom: 30px;
+}
+p {
+    font-size: 1.2rem; /* Aumentei um pouco para melhor legibilidade */
+    line-height: 1.8;
+}
+.subtitle {
+    font-size: 1.6rem;
+    color: var(--branco);
+    opacity: 0.9;
+}
+#inicio {
+    background: linear-gradient(45deg, rgba(255, 175, 204, 0.8), rgba(162, 210, 255, 0.8));
+}
+
+/* ---- BOTÃO (sem mudanças) ---- */
+.btn {
+    display: inline-block; margin-top: 30px; padding: 15px 30px;
+    font-size: 1.1rem; font-weight: bold; color: var(--texto-escuro);
+    background-color: var(--branco); border: none; border-radius: 50px;
+    text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5);
+}
+
+/* ---- GALERIA DE FOTOS (sem mudanças) ---- */
+.gallery-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+}
+.gallery-item img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.05); filter: brightness(1.1);
+}
+
+/* ---- FRASES E CARTA ---- */
+blockquote {
+    /* MUDANÇA AQUI: Usando Mali para a citação */
+    font-family: 'Mali', cursive;
+    font-size: 2.2rem; color: var(--lilas); border-left: 4px solid var(--lilas);
+    padding-left: 20px; margin-top: 20px;
+}
+.letter-box {
+    background: rgba(255, 255, 255, 0.7); padding: 40px; border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); min-height: 200px; text-align: left;
+}
+#letter-text::after {
+    content: '|'; animation: blink 0.7s infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---- PLAYER DE MÚSICA (sem mudanças) ---- */
+.music-player {
+    position: fixed; bottom: 20px; right: 20px; background: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px; border-radius: 50px; display: flex; align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); backdrop-filter: blur(5px);
+}
+.music-player p { font-size: 0.9rem; margin-right: 10px; }
+#play-pause-btn {
+    background: var(--rosa-claro); border: none; color: white; width: 35px; height: 35px;
+    border-radius: 50%; font-size: 1rem; cursor: pointer; transition: background-color 0.3s ease;
+}
+#play-pause-btn:hover { background-color: var(--lilas); }
+
+/* ---- RESPONSIVIDADE (ajustes de tamanho) ---- */
+@media (max-width: 768px) {
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.8rem; }
+    p { font-size: 1.1rem; }
+    .section-content { padding: 60px 15px; }
+    .letter-box { padding: 25px; }
+}
